@@ -19,9 +19,7 @@ router.get('/registro', (req,res) =>{
 });
 
 
-router.get('/', (req,res) => {
-    res.render('links/covid')
-}); 
+
 
 
 
@@ -36,5 +34,4 @@ router.get('/random', (req,res) =>{
 });
 */
 
-
-module.exports = router;  
+module.exports = router;

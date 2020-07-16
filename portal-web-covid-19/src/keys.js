@@ -4,8 +4,8 @@ module.exports = {
         //connectionLimit: 10,
         host: 'localhost',
         user: 'root',
-        password: 'root',
-        //database: 'db_links'
+        password: 'admin',
+        database: 'COVID19'
     }
 
 };
