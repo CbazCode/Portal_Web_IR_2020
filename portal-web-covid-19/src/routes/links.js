@@ -11,12 +11,7 @@ router.get('/recomendaciones', (req,res) =>{
 router.get('/noticias', (req,res) =>{
     res.render('links/noticias');
 });
-router.get('/inicio-de-sesion', (req,res) =>{
-    res.render('links/inicioDeSesion');
-});
-router.get('/registro', (req,res) =>{
-    res.render('links/registro');
-});
+
 
 
 

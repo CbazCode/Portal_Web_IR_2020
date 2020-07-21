@@ -1,3 +1,5 @@
+//Barra de navegacion
+
 let btnMenu = document.querySelector('.btn-menu');
 let barIconX = document.querySelector('.btn-menu i');
 let menu = document.querySelector('.list-container');

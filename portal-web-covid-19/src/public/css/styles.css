@@ -1,4 +1,4 @@
-
+/* Imagen de desarrolladores */
 .desarrolladores{
     position: relative;
     left: 25%;
@@ -14,6 +14,9 @@
     transition: all .4s ease-in-out;
 }
 
+
+
+/* Barra de navegacion*/
 :root{
     --red:#ff2e63;
     --black:#252a34;
