@@ -6,6 +6,8 @@ let menu = document.querySelector('.list-container');
 let menuContent = document.querySelector('.menu');
 var activador = true;
 
+
+
 btnMenu.addEventListener('click', (event) => {
 
   //Icon X

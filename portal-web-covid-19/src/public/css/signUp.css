@@ -1,0 +1,116 @@
+/* INICIO DE SESION */
+
+
+.signIn{
+    background-image: url(../img/exterior.jpg);
+    margin-top: 50px;
+    margin-bottom: 30px;
+    height: 800px;
+}
+.logo{
+    width: 130px;
+
+}
+
+.formulario{
+    padding: 20px;
+    background-image: url(../img/exterior.jpg);
+    position: relative;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 15px 6px -6px rgba(0,0,0,0.568);
+    z-index: 1;
+    margin-top: 50px;
+}
+.formulario::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#407795db,#526286e5);
+    z-index: -1;  
+}
+
+.caja{
+    border: none;
+    border-radius: 10%;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    background-color: rgba(255,255,255,0.274);
+    transition: 0.5s;
+}
+
+.caja:hover{
+    background-color: rgba(255,255,255,0.274);
+    transform:translate3d(5px,0px,5px);
+    box-shadow: none;
+}
+
+.caja:focus{
+    background-color: rgba(255,255,255,0.274);
+    transform: translate3d(5px,0px,5px);
+    box-shadow: none;
+}
+
+.caja::placeholder{
+    color: white;
+    font-style:oblique;
+}
+
+.boton{
+    background-color: white;
+    border-radius: 20px ;
+    border: none;
+    font-weight: 700;
+    transition: 0.5s all;
+    color: rgb(88, 171, 199);
+
+}
+
+.boton:hover{
+    
+    border:none;
+    color:gray;
+    cursor: pointer;
+    background-size: 300% 100%;
+    transition: all .4s ease-in-out;
+    box-shadow: 0 4px 15px 0 rgba(104, 193, 252, 0.75);
+    background-image: linear-gradient(to right,#60f7fc,#44a5ff,#44a5ff,#60f7fc);
+
+}
+
+.registrate{
+    font-weight: 700;
+}
+
+.links{
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    padding-left: 13px;
+    padding-right: 13px;
+    border-radius: 50px;
+    color:#395599;
+    transition: 0.5s all;
+}
+
+.links:hover{
+    color: white;
+    background-color:#395599;
+    box-shadow: 0 0 5p white;
+}
+
+.enlace{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.enlace:hover{
+    text-decoration: none;
+    color:black;
+}
