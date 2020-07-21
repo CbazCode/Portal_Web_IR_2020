@@ -1,1 +1,29 @@
-Estas en las recomendaciones!
+
+  <h1>Datos coronavirus</h1>
+  <table>
+    <thead>
+      <tr id="columns"></tr>
+    </thead>
+    <tbody id="countries"></tbody>
+  </table>
+  <script>
+    fetch('https://corona.lmao.ninja/v3/covid-19/countries').then(function (response) {
+      response.json().then((json) => {
+        const columns = [{ title: 'País', field: 'country' }, { title: 'Casos', field: 'cases' },
+        { title: 'Activos', field: 'active' }, { title: 'Recuperados', field: 'recovered' }, { title: 'Muertes', field: 'deaths' }]
+        document.getElementById('columns').innerHTML += columns.map((column) => `<th>${column.title}</th>`).join("")
+
+        json.forEach((country) => {
+          const tds = columns.map((column) => `<td>${country[column.field]}</td>`)
+          document.getElementById('countries').innerHTML += `<tr> ${tds.join("")}</tr>`
+        })
+      })
+    })
+  </script>
+  <style>
+    
+    
+    table { background-color: #394264; width: 800px; border-collapse: collapse; border-radius: 6px 6px 6px 6px; overflow: hidden; }
+    thead { background-color: #11a8ab; }
+    td,th { padding: 10px; text-align: left; border-bottom: 1px solid #1f253d; }
+  </style>
