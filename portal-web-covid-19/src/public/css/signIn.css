@@ -1,0 +1,94 @@
+:root {
+    --color-dark: #003C8D;
+    --color-dark-x: #0a0c0f;
+    --color-dark-xx: #354461;
+    --color-light: #ffffffff;
+    --color-grey: #f5f6f8;
+    
+}
+
+#bodySignUp {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background-color: var(--color-grey);
+    color: var(--color-light);
+    letter-spacing: .05rem;
+}
+
+.bg-light {
+    background-color: var(--color-light)!important;
+}
+
+.bg-dark {
+    background-color: var(--color-dark)!important;
+}
+
+.p-6 {
+    padding: 4rem 8rem;
+}
+
+.contact-box {
+    padding: 3rem;
+}
+
+.btn {
+    font-weight: 400;
+    padding: 1rem 2rem;
+    border-radius: 90em;
+    min-width: 10rem;
+    border:none;
+    color:gray;
+    cursor: pointer;
+    background-size: 300% 100%;
+    transition: all .4s ease-in-out;
+    box-shadow: 0 4px 15px 0 rgba(104, 193, 252, 0.75);
+    background-image: linear-gradient(to right,#2d82f1,#44a5ff,#44a5ff,#60f7fc);
+}
+
+.btn-outline-dark {
+    border: 2px solid var(--color-dark-xx);
+    
+}
+
+
+.form-control {
+    background-color: var(--color-dark-xx);
+    border: 2px solid var(--color-dark-xx);
+    border-radius: 20em;
+    padding: 1.5rem 1rem;
+    transition: 0.5s all;
+    
+    
+}
+
+.register-bg {
+    background-image: url('../img/covid5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.testiomonial {
+    bottom: 10px
+}
+
+@media (max-width: 575.98px) {
+    .p-6 {
+        padding: 2rem;
+    }
+
+    .contact-box {
+        padding: 0;
+    }
+
+    .width-100 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) { 
+    .register-bg {
+        min-height: 50vh;
+    }
+}
