@@ -19,6 +19,7 @@
     "express-validator": "^6.6.0",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
+    "node-bing-api": "^4.0.1",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "timeago.js": "^4.0.2"
