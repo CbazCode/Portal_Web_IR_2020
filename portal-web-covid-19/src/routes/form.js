@@ -30,7 +30,8 @@ router.post('/form',async(req,res)=>{
     }else{
         res.redirect('covid/sano');
     }*/
-    await pool.query('INSERT INTO test_usuario SET ?',[newTest] );
+    //pool.query('INSERT INTO test_usuario SET ?',[newTest] );
+   await pool.query('INSERT INTO test_usuario SET ?',[newTest] );
     
 })
 
