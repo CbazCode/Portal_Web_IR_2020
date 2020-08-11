@@ -6,17 +6,26 @@ const passport = require('passport');
 router.get('/inicio-de-sesion', (req,res) =>{
     res.render('auth/signIn');
 });
+
+router.post('/inicio-de-sesion',(req,res,next) =>{
+    passport.authenticate('local.signin',{
+        successRedirect:'/profile',
+        failureRedirect:'/inicio-de-sesion',
+        failureFlash:true
+    })(req,res,next);
+});
+
 router.get('/registrarse', (req,res) =>{
     res.render('auth/signUp');
 });
-router.post('/registrarse',(req,res)=>{
-    passport.authenticate('local.signup', {
-        successRedirect: '/',
-        failureRedirect: '/registrarse',
-        failureFlash: true
-    });
+router.post('/registrarse', passport.authenticate('local.signup',{
+        successRedirect:'/profile',
+        failureRedirect:'/registrarse',
+        failureFlash:true
+}));
+
+router.get('/profile',(req,res)=>{
+    res.send('Esto es el profile')
 });
-
-
 
 module.exports = router;  

@@ -21,15 +21,15 @@
                     </div>
                     <p class="text-muted mb-3 col-md-6">Ingresar información </p>
 
-                    <form>
+                    <form action="/inicio-de-sesion" method="POST">
                         
                         <div class="form-group mb-4">
                             <label class="font-weight-bold col-md-6">Correo electrónico <span class="text-danger">*</span></label>
-                            <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico">
+                            <input type="email" name="email" class="form-control" placeholder="Ingresa tu correo electrónico" required>
                         </div>
                         <div class="form-group mb-4">
                             <label class="font-weight-bold col-md-6">Contraseña <span class="text-danger">*</span></label>
-                            <input type="password" class="form-control" placeholder="Ingresa una contraseña">
+                            <input type="password" name="constrasñe" class="form-control" placeholder="Ingresa una contraseña" required>
                         </div>
                         <div class="form-group mb-4 col-md-6">
                             <div class="form-check">

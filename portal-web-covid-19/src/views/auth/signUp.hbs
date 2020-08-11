@@ -11,73 +11,73 @@
                 <h1 class="font-weight-bold mb-3 col md-6">Crea tu cuenta</h1>
 
                 <p class="text-muted col md-6 mb-5 ">Ingresa la siguiente información para registrarte.</p>
-                <form>
+                <form action="/registrarse" method="POST">
                     <div class="form-row mb-4">
                         <div class="form-group col-md-6">
                             <label class="font-weight-bold col md-6">Nombre <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Tu nombre" required>
+                            <input type="text" name="nombre" class="form-control" placeholder="Tu nombre" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="font-weight-bold col md-6">Apellido <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Tu apellido" required>
+                            <input type="text" name="apellido" class="form-control" placeholder="Tu apellido" required>
                         </div>
                     </div>
                     <div class="form-row mb-2">
                         <div class="form-group col-md-6">
                             <label class="font-weight-bold col md-6">Sexo <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Ingresa tu Sexo" required>
+                            <input type="text" name="sexo" class="form-control" placeholder="Ingresa tu Sexo" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="font-weight-bold col md-6">Edad <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Ingresa tu Edad" required>
+                            <input type="text" name="edad" class="form-control" placeholder="Ingresa tu Edad" required>
                         </div>
                     </div>
                     <div class="form-row mb-2">
                         <div class="form-group col-md-6">
                             <label class="font-weight-bold col md-6">Telefono <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Ingresa tu numero de celular" required>
+                            <input type="text" name="telefono" class="form-control" placeholder="Ingresa tu numero de celular" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="font-weight-bold col md-6">DNI <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Ingresa tu DNI" required>
+                            <input type="text" name="DNI" class="form-control" placeholder="Ingresa tu DNI" required>
                         </div>
                     </div>
                     <div class="form-group mb-3">
                         <label class="font-weight-bold col md-6">Correo electrónico <span
                                 class="text-danger">*</span></label>
-                        <input type="email" class="form-control" placeholder="Ingresa tu correo electrónico" required>
+                        <input type="email" name="email" class="form-control" placeholder="Ingresa tu correo electrónico" required>
                     </div>
                     <div class="form-group mb-3">
                         <label class="font-weight-bold col md-6">Contraseña <span class="text-danger">*</span></label>
-                        <input type="password" class="form-control" placeholder="Ingresa una contraseña" required>
+                        <input type="password" name="contraseña" class="form-control" placeholder="Ingresa una contraseña" required>
                     </div>
 
                     <div class="form-row mb-2">
                         <div class="form-group col-md-6 ">
                             <label class="font-weight-bold col md-6">Departamento <span
                                     class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Ingresa tu Departamento" required>
+                            <input type="text" name="departamento" class="form-control" placeholder="Ingresa tu Departamento" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="font-weight-bold col md-6">Provincia <span
                                     class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Ingresa tu Provincia" required>
+                            <input type="text" name="provincia" class="form-control" placeholder="Ingresa tu Provincia" required>
                         </div>
                     </div>
                     <div class="form-row mb-2">
                         <div class="form-group col-md-6">
                             <label class="font-weight-bold col md-6">Distrito <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Ingresa tu Distrito" required>
+                            <input type="text" name="distrito" class="form-control" placeholder="Ingresa tu Distrito" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="font-weight-bold col md-6">Estado de Salud <span
                                     class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="Sano-Infectado" required>
+                            <input type="text" name="estado" class="form-control" placeholder="Sano-Infectado" required>
                         </div>
                     </div>
                     <div class="form-group mb-3">
                         <label class="font-weight-bold col md-6">Domicilio <span class="text-danger">*</span></label>
-                        <input type="domicilio" class="form-control" placeholder="Ingresa tu Domicilio" required>
+                        <input type="domicilio" name="domicilio" class="form-control" placeholder="Ingresa tu Domicilio" required>
                     </div>
                     <div class="form-group mb-5">
                         <div class="form-check">
