@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-//var Bing = require('node-bing-api')({ accKey: "fa28a7d90bcb4ad7bb5b27e3bc85eee0" });
 var Bing = require('node-bing-api')({ accKey: "842f394f231646f5870606f868d4440e" });
 
 const pool = require('../database');
@@ -33,21 +32,5 @@ router.get('/sano', (req,res)=>{
     res.send('sano');
 })
 
-//res.render('links/recomendaciones');
-//res.render('links/noticias');
-
-
-
-
-
-//await pool.query('?',parametros)
-//Para que await funcione se debe poner async en el router.post('/fill', async (req,res) =>...)
-
-
-/*
-router.get('/random', (req,res) =>{
-    res.redirect('http://google.com.pe');
-});
-*/
 
 module.exports = router;

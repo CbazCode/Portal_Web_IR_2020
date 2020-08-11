@@ -2,7 +2,7 @@ module.exports = {
     database: {
         host: 'localhost',
         user: 'root',
-        password: 'DO72LN61',
+        password: 'root',
         database: 'COVID19'
     }
 };

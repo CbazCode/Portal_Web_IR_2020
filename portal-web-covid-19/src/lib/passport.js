@@ -13,7 +13,7 @@ passport.use('local.signin', new LocalStrategy({
   console.log(email)
   console.log(contraseña)
   const rows = await pool.query('SELECT * FROM usuarios WHERE email = ?', [email]);
-  console.log(rows.length);
+  //console.log(rows.length);
   /*if (rows.length > 0) {
     const user = rows[0];
     const validPassword = await helpers.matchPassword(contraseña, user.contraseña)
@@ -53,7 +53,7 @@ passport.use('local.signup', new LocalStrategy({
   newUser.contraseña = await helpers.encryptPassword(contraseña);
   // Saving in the Database
   const result = await pool.query('INSERT INTO usuarios SET ? ', [newUser]);
-  console.log("la ptmdre");
+  
   newUser.idusuario = result.insertId;
   return done(null, newUser);
 }));

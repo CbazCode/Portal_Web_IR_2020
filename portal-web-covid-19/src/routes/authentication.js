@@ -10,8 +10,8 @@ router.get('/inicio-de-sesion', (req,res) =>{
 router.post('/inicio-de-sesion',(req,res,next) =>{
     passport.authenticate('local.signin',{
         successRedirect:'/profile',
-        failureRedirect:'/inicio-de-sesion',
-        failureFlash:true
+        failureRedirect:'/inicio-de-sesion'
+        //failureFlash:true
     })(req,res,next);
 });
 
@@ -20,8 +20,8 @@ router.get('/registrarse', (req,res) =>{
 });
 router.post('/registrarse', passport.authenticate('local.signup',{
         successRedirect:'/profile',
-        failureRedirect:'/registrarse',
-        failureFlash:true
+        failureRedirect:'/registrarse'
+        //failureFlash:true
 }));
 
 router.get('/profile',(req,res)=>{
