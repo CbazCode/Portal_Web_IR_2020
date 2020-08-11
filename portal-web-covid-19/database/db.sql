@@ -2,28 +2,8 @@ CREATE DATABASE COVID19;
 
 use COVID19;
 
-CREATE TABLE usuarios(
-    dni int PRIMARY KEY NOT NULL,
-    nombre varchar(100) NOT NULL,
-    apellido varchar(100) NOT NULL,
-    edad varchar(100) NOT NULL,
-    sexo varchar(10) NOT NULL,
-    departamento varchar(100) NOT NULL,
-    provincia varchar(100) NOT NULL,
-    distrito varchar(100) NOT NULL,
-    direccion varchar(100) NOT NULL,
-    telefono int NOT NULL,
-    estado  varchar(10) DEFAULT NULL,
-    correo varchar(100) NOT NULL,
-    contrasena varchar(100) NOT NULL
-    );
-SELECT * FROM usuarios
-
-
 CREATE TABLE test_usuario(
-    dni int NOT NULL,
-    contadorDias int default 1,
-    fecha DATETIME ,
+    idusuario int auto_increment,
     preg1 int NOT NULL,
     preg2 int NOT NULL,
     preg3 int NOT NULL,
@@ -39,9 +19,23 @@ CREATE TABLE test_usuario(
     preg13 int NOT NULL,
     preg14 int NOT NULL,
     resultadoTest int NOT NULL,
-    cambioDiario int NOT NULL,
-    FOREIGN KEY (dni) REFERENCES usuarios(dni)
+    FOREIGN KEY test_usuario(idusuario) REFERENCES usuarios(idusuario),
+    fecha timestamp NOT NULL DEFAULT current_timestamp 
 );
 
-
-SELECT *FROM usuarios;
+CREATE TABLE usuarios(
+    idusuario int PRIMARY KEY auto_increment,
+    dni int  NOT NULL,
+    nombre varchar(100) NOT NULL,
+    apellido varchar(100) NOT NULL,
+    edad varchar(100) NOT NULL,
+    sexo varchar(10) NOT NULL,
+    departamento varchar(100) NOT NULL,
+    provincia varchar(100) NOT NULL,
+    distrito varchar(100) NOT NULL,
+    domicilio varchar(100) NOT NULL,
+    telefono int NOT NULL,
+    estado  varchar(10) DEFAULT NULL,
+    email varchar(100) NOT NULL,
+    contraseña varchar(100) NOT NULL
+);
