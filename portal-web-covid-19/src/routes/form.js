@@ -7,28 +7,31 @@ router.get('/form',(req,res)=>{
     res.render('links/form');
 })
 
-router.post('/form',(req,res)=>{
+router.post('/form',async(req,res)=>{
     const newTest = {
-        fecha:"",
-        question1: parseInt(req.body.question1),    
-        question2: parseInt(req.body.question2),
-        question3: parseInt(req.body.question3),
-        question4: parseInt(req.body.question4),
-        question5: parseInt(req.body.question5),
-        question6: parseInt(req.body.question6),
-        question7: parseInt(req.body.question7),
-        question8: parseInt(req.body.question8),
-        question9: parseInt(req.body.question9),
-        question10: parseInt(req.body.question10),
-        question11: parseInt(req.body.question11),
-        question12: parseInt(req.body.question12),
-        question13: parseInt(req.body.question13),
-        question14: parseInt(req.body.question14),
-        resultado: 4,
-        cambioDiario:5
+        preg1: parseInt(req.body.question1),    
+        preg2: parseInt(req.body.question2),
+        preg3: parseInt(req.body.question3),
+        preg4: parseInt(req.body.question4),
+        preg5: parseInt(req.body.question5),
+        preg6: parseInt(req.body.question6),
+        preg7: parseInt(req.body.question7),
+        preg8: parseInt(req.body.question8),
+        preg9: parseInt(req.body.question9),
+        preg10: parseInt(req.body.question10),
+        preg11: parseInt(req.body.question11),
+        preg12: parseInt(req.body.question12),
+        preg13: parseInt(req.body.question13),
+        preg14: parseInt(req.body.question14),
+        resultadoTest: parseInt(req.body.question1) + parseInt(req.body.question2)+parseInt(req.body.question3)+parseInt(req.body.question4)+parseInt(req.body.question5)+parseInt(req.body.question6)+parseInt(req.body.question7)+parseInt(req.body.question8)+parseInt(req.body.question9)+parseInt(req.body.question10)+parseInt(req.body.question11)+parseInt(req.body.question12)+parseInt(req.body.question13)+parseInt(req.body.question14),
     }
-    console.log(newTest);
-    res.send('recibido yeh');
+    /*if(newTest.resultado>9){
+        res.redirect('covid/enfermo');
+    }else{
+        res.redirect('covid/sano');
+    }*/
+    await pool.query('INSERT INTO test_usuario SET ?',[newTest] );
+    
 })
 
 module.exports = router;

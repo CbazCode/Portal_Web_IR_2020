@@ -13,7 +13,13 @@ router.get('/noticias', (req,res) =>{
 });
 
 
+router.get('/enfermo',(req,res)=>{
+    res.send('enfermo');
+})
 
+router.get('/sano', (req,res)=>{
+    res.send('sano');
+})
 
 
 
