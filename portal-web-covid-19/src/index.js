@@ -6,6 +6,11 @@ const flash = require('connect-flash');
 const { urlencoded } = require('express');
 const passport = require('passport');
 
+
+
+
+
+
 const { database } = require('./keys');
 
 // Intializations
@@ -33,6 +38,7 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 //Global variables
 app.use((req,res,next)=>{
     app.locals.success=req.flash('success');
@@ -47,6 +53,7 @@ app.use((req,res,next)=>{
 app.use(require('./routes'));
 app.use(require('./routes/authentication'));
 app.use('/COVID', require('./routes/links'));
+app.use(require('./routes/form'));
 
 //Public
 app.use(express.static(path.join(__dirname,'public')));
