@@ -11,9 +11,7 @@ router.get('/recomendaciones', (req,res) =>{
 router.get('/noticias', (req,res) =>{
     res.render('links/noticias');
 });
-router.get('/form',(req,res)=>{
-    res.render('links/form');
-})
+
 
 
 

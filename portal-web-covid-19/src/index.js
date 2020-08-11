@@ -3,13 +3,13 @@ const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const { urlencoded } = require('express');
-const passport = require('passport');
+//const passport = require('passport');
 
 const { database } = require('./keys');
 
 // Intializations
 const app = express();
-require('./lib/passport');
+/*require('./lib/passport');*/
 
 // Settings
 app.set('port', process.env.PORT || 4000);
@@ -27,8 +27,8 @@ app.set('view engine', '.hbs');
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-app.use(passport.initialize());
-app.use(passport.session());
+//app.use(passport.initialize());
+//app.use(passport.session());
 
 //Global variables
 app.use((req,res,next)=>{
@@ -40,6 +40,7 @@ app.use((req,res,next)=>{
 app.use(require('./routes'));
 app.use(require('./routes/authentication'));
 app.use('/COVID', require('./routes/links'));
+app.use(require('./routes/form'));
 
 //Public
 app.use(express.static(path.join(__dirname,'public')));
