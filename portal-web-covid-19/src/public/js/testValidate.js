@@ -17,7 +17,11 @@ document.getElementById("formularioCovid").addEventListener("submit", function(e
     !document.querySelector('input[name="question12"]:checked') ||
     !document.querySelector('input[name="question13"]:checked') ||
     !document.querySelector('input[name="question14"]:checked') ) {
-        alert('Error, faltan responder algunas pregntas');
+        Swal.fire({
+            icon: 'error',
+            title: 'Error!',
+            text: "Algunas preguntas no fueron contestadas"
+          })
         hasError = true;
     }
     
