@@ -1,5 +1,7 @@
 const express = require('express');
+const Swal = require('sweetalert2');
 const router = express.Router();
+
 
 const pool = require('../database');
 
@@ -9,6 +11,7 @@ router.get('/form',(req,res)=>{
 
 router.post('/form',async(req,res)=>{
     const newTest = {
+        idusuario: req.user.idusuario,
         preg1: parseInt(req.body.question1),    
         preg2: parseInt(req.body.question2),
         preg3: parseInt(req.body.question3),
@@ -25,11 +28,25 @@ router.post('/form',async(req,res)=>{
         preg14: parseInt(req.body.question14),
         resultadoTest: parseInt(req.body.question1) + parseInt(req.body.question2)+parseInt(req.body.question3)+parseInt(req.body.question4)+parseInt(req.body.question5)+parseInt(req.body.question6)+parseInt(req.body.question7)+parseInt(req.body.question8)+parseInt(req.body.question9)+parseInt(req.body.question10)+parseInt(req.body.question11)+parseInt(req.body.question12)+parseInt(req.body.question13)+parseInt(req.body.question14),
     }
-    /*if(newTest.resultado>9){
-        res.redirect('covid/enfermo');
+   // UTILIZAR PARA EL FOREIGN KEY 
+   //console.log(req.user.idusuario);
+    if(newTest.resultadoTest>9){
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'sano',
+            showConfirmButton: false,
+            timer: 1500
+          })
     }else{
-        res.redirect('covid/sano');
-    }*/
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'enfermo',
+            showConfirmButton: false,
+            timer: 1500
+          })
+    }
     //pool.query('INSERT INTO test_usuario SET ?',[newTest] );
    await pool.query('INSERT INTO test_usuario SET ?',[newTest] );
     

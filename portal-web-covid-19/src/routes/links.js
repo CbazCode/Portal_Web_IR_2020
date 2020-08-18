@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 var Bing = require('node-bing-api')({ accKey: "842f394f231646f5870606f868d4440e" });
-
+const { isLoggedIn } = require('../lib/auth');
 const pool = require('../database');
 
 
@@ -24,11 +24,11 @@ router.get('/noticias', (req,res) =>{
 });
 
 
-router.get('/enfermo',(req,res)=>{
+router.get('/enfermo',isLoggedIn,(req,res)=>{
     res.send('enfermo');
 })
 
-router.get('/sano', (req,res)=>{
+router.get('/sano',isLoggedIn, (req,res)=>{
     res.send('sano');
 })
 
