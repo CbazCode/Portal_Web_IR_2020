@@ -25,6 +25,9 @@ router.post('/form',async(req,res)=>{
         preg14: parseInt(req.body.question14),
         resultadoTest: parseInt(req.body.question1) + parseInt(req.body.question2)+parseInt(req.body.question3)+parseInt(req.body.question4)+parseInt(req.body.question5)+parseInt(req.body.question6)+parseInt(req.body.question7)+parseInt(req.body.question8)+parseInt(req.body.question9)+parseInt(req.body.question10)+parseInt(req.body.question11)+parseInt(req.body.question12)+parseInt(req.body.question13)+parseInt(req.body.question14),
     }
+   // UTILIZAR PARA EL FOREIGN KEY 
+   //console.log(req.user.idusuario);
+
     /*if(newTest.resultado>9){
         res.redirect('covid/enfermo');
     }else{

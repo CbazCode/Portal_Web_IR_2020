@@ -9,8 +9,13 @@
             <li><a href="/" class="active">Inicio</a></li>
             <li><a href="/covid/noticias">Noticias</a></li>
             <li><a href="/covid/recomendaciones">Recomendaciones</a></li>
+            {{#if user}}
+            <li ><a href="/perfil"class="inicioSesion">Mi perfil</a></li>
+            <li ><a href="/cerrar-sesion"class="inicioSesion">Cerrar sesión</a></li>
+            {{else}}
             <li ><a href="/inicio-de-sesion"class="inicioSesion">Iniciar sesión</a></li>
             <li ><a href="/registrarse" class="registrate">Registrate</a></li>
+            {{/if}}
         </ul>
       </div>
     </nav>
