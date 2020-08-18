@@ -3,25 +3,36 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron" style="margin-top: 60px;">
         <div class="container">
-            <h1 class="display-3">Manten tu distancia</h1>
-            <p class="lead text-muted">En esta seccion podrás observar variedad de recomendaciones para prevenir el COVID-19</p>
-            <p class="lead text-muted">"No te rindas, por favor no cedas, aunque el frío queme, aunque el miedo muerda, aunque el sol se esconda, y se calle el viento, aún hay fuego en tu alma, aún hay vida en tus sueños. Porque la vida es tuya y tuyo también el deseo, porque cada día es un comienzo nuevo, porque esta es la hora y el mejor momento". <strong>Mario Benedetti</strong> </p>
+            <h1 class="display-3" id="texto-titulo-recomendaciones">Manten tu distancia</h1>
+            <p  id="texto-content-recomendaciones">En esta seccion podrás observar variedad de recomendaciones para prevenir el COVID-19</p>
+            <p  id="texto-content-recomendaciones">"No te rindas, por favor no cedas, aunque el frío queme, aunque el miedo muerda, aunque el sol se esconda, y se calle el viento, aún hay fuego en tu alma, aún hay vida en tus sueños. Porque la vida es tuya y tuyo también el deseo, porque cada día es un comienzo nuevo, porque esta es la hora y el mejor momento". <strong>Mario Benedetti</strong> </p>
             
         </div>
     </div>
 
-    <div class="container">
+    <div class="container ">
         
         <div class="row">
             {{#each recomendaciones}}
-            <div class="col-md-4">
+            <!--<div class="col-md-4 card mb-4 box-shadow">
                 <h4>{{this.name}}</h4>
-                <p>{{this.description}}</p>
-                <p><a class="btn btn-secondary" href="{{this.url}}" role="button" target="_blank">Seguir leyendo »</a></p>
+                <p >{{this.description}}</p>
+                <p><a class="btn btn-secondary d-flex align-items-center" href="{{this.url}}" role="button" target="_blank">Seguir leyendo »</a></p>
                 <br>
-            </div>
-            
+            </div>--> 
+            <div class="col-md-4">
+              <div class="card mb-3 box-shadow" style="height:90%">             
+                <div class="card-body  m-2">
+                  <p class="texto-titulo-recomendaciones">{{this.name}}</p>
+                   <p class="texto-recomendaciones">{{this.description}}</p>
+                  <div class="boton-seguir-leyendo">
+                    <a href="{{this.url}}" class="btn btn-dark" target="_blank">Seguir leyendo »</a>
+                  </div>
+                </div>
+              </div>
+            </div>           
             {{/each}}
+            
         </div><hr>
         
     </div> <!-- /container -->

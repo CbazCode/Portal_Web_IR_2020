@@ -1,15 +1,15 @@
 
 <main role="main">
-      <section class="jumbotron text-center" style="margin-top: 60px;">
-        <div class="container">
-          <h1 class="jumbotron-heading">Noticias COVID-19</h1>
-          <h2 class="jumbotron-heading">Perú</h2>
-          <p class="lead text-muted">
+    <section class="jumbotron text-center" style="margin-top: 60px;">
+      <div class="contenedor-fondo-tabla">         
+          <h1 class="jumbotron-heading" id="texto-titulo-noticias">Noticias COVID-19</h1>
+          <h2 class="jumbotron-heading" id="texto-titulo-noticias">Perú</h2>
+          <p  id="texto-content-noticias" >
             En esta sección puedes ver las noticias mas recientes acerca del COVID-19 y también el estado del virus en el país.
-            <br>"La esperanza significa que uno no se rinde a la ansiedad, el derrotismo o la depresión cuando tropieza con dificultades y contratiempos". <strong>Daniel Goleman</strong>
+            <br>"La esperanza significa que uno no se rinde a la ansiedad, el derrotismo o la depresión cuando tropieza con dificultades y contratiempos". <br><strong>Daniel Goleman</strong>
           </p>
 
-          <div class="lead row justify-content-center align-items-center minh-100" > 
+          <div class="lead row justify-content-center align-items-center minh-500"  > 
             <table>
               <thead>
                 <tr id="columns"></tr>
@@ -31,19 +31,25 @@
               table {  
                       width: 1000px; 
                       border-collapse: collapse; 
+                      position: relative;
+                      background-color: rgb(183, 222, 240);
                        }
               thead { 
-                      background-color: #42A2FE; }
-              td,th { padding: 12px; 
-                      text-align: center;
-                      border-bottom: 1px solid #1f253d; }
+                      /*background-color: #42A2FE;*/
+                      background-color: #42A2FE; 
+                      
+                      }
+              td,th { 
+                padding: 12px; 
+                text-align: center;
+                border-bottom: 1px solid #1f253d;
+              }
             </style>
           </div>
-
-
-          
         </div>
-      </section>
+      </div>
+
+    </section>
   
       <div class="album py-5 bg-light">
         <div class="container">
@@ -51,10 +57,12 @@
           <div class="row">
              {{#each noticias}}
             <div class="col-md-3">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top"  style="height: 132px; width: 100%; display: block;" src="{{this.image.thumbnail.contentUrl}}">
-                <div class="card-body">
-                  <h5>{{this.name}}</h5>
+              <div class="card mb-4 box-shadow" style="height:90%">
+                <div class="container-images-noticias">
+                    <img class="imagenes-noticias" src="{{this.image.thumbnail.contentUrl}}">
+                </div>               
+                <div class="card-body align-items-center m-3">
+                  <p class="texto-noticias">{{this.name}}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <a href="{{this.url}}" class="btn btn-dark" target="_blank">Leer más</a>
                   </div>

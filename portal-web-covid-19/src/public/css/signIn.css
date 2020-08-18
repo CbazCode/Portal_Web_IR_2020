@@ -38,7 +38,7 @@
     border-radius: 90em;
     min-width: 10rem;
     border:none;
-    color:gray;
+    color:rgb(26, 25, 25);
     cursor: pointer;
     background-size: 300% 100%;
     transition: all .4s ease-in-out;
@@ -47,14 +47,14 @@
 }
 
 .btn-outline-dark {
-    border: 2px solid var(--color-dark-xx);
+    border: 2px solid var(--color-dark-x);
     
 }
 
 
 .form-control {
-    background-color: var(--color-dark-xx);
-    border: 2px solid var(--color-dark-xx);
+    background-color:#CFF3FD;
+    border: 2px solid var(--color-dark-x);
     border-radius: 20em;
     padding: 1.5rem 1rem;
     transition: 0.5s all;
