@@ -1,13 +1,76 @@
+<main id="bodySignUp" style="width:100%" >
+    <div class="row no-gutters bg-dark">
+        <div class="col-xl-5 col-lg-12 register-bg">
+            <div class="position-absolute testiomonial p-4">
+                <h3 class="font-weight-bold text-light">No estas solo, estamos contigo</h3>
+                <p class="lead text-black">Que la esperanza y las ganas de luchar nunca nos falten</p>
+            </div>
+        </div>
+        <div class="col-xl-7 col-lg-12 d-flex">
+            <div class="container align-self-center p-6 ">
+                <h1 class="font-weight-bold mb-3 col md-6">Perfil de Usuario</h1>
 
-<main>
-<div style="margin-top: 100px;">
-
-<p>{{user.idusuario}}</p>
-<p>{{user.email}}</p>
-<p>{{user.apellido}}</p>
-
-
-</div>
-
-
+                <p class="text-muted col md-6 mb-5 ">Bienvenido {{user.nombre}} {{user.apellido}}</p>
+                <form action="/registrarse" method="POST">
+                
+                    <div class="form-row mb-2">
+                        <div class="form-group col-md-6">
+                            <label class="font-weight-bold col md-6">Sexo <span class="text-danger">*</span></label>
+                            <input disabled class="form-control" placeholder={{user.sexo}} >
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="font-weight-bold col md-6">Edad <span class="text-danger">*</span></label>
+                           <input disabled class="form-control" placeholder={{user.edad}} >
+                        </div>
+                    </div>
+                    <div class="form-row mb-2">
+                        <div class="form-group col-md-6">
+                            <label class="font-weight-bold col md-6">Telefono<span class="text-danger">*</span></label>
+                            <input disabled class="form-control" placeholder={{user.telefono}} >
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="font-weight-bold col md-6">DNI <span class="text-danger">*</span></label>
+                            <input disabled class="form-control" placeholder={{user.dni}} >
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="font-weight-bold col md-6">Correo electrónico <span
+                                class="text-danger">*</span></label>
+                        <input disabled class="form-control" placeholder={{user.email}} >
+                    </div>
+                   
+                    <div class="form-row mb-2">
+                        <div class="form-group col-md-6 ">
+                            <label class="font-weight-bold col md-6">Departamento <span
+                                    class="text-danger">*</span></label>
+                            <input disabled class="form-control" placeholder={{user.departamento}} >
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="font-weight-bold col md-6">Provincia <span
+                                    class="text-danger">*</span></label>
+                            <input disabled class="form-control" placeholder={{user.provincia}} >
+                        </div>
+                    </div>
+                    <div class="form-row mb-2">
+                        <div class="form-group col-md-6">
+                            <label class="font-weight-bold col md-6">Distrito <span class="text-danger">*</span></label>
+                            <input disabled class="form-control" placeholder={{user.distrito}} >
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="font-weight-bold col md-6">Estado de Salud <span
+                                    class="text-danger">*</span></label>
+                            <input disabled class="form-control" placeholder={{user.estado}} >
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="font-weight-bold col md-6">Domicilio <span class="text-danger">*</span></label>
+                        <input disabled class="form-control" placeholder={{user.domicilio}} >
+                    </div>
+                     <button class="btn btn-primary width-100 "  type="submit"><a href='/form' style="text-decoration: none; " >Iniciar Test Diario </a> </button>
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
 </main>

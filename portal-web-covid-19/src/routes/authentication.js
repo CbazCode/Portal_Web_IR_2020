@@ -19,7 +19,7 @@ router.get('/registrarse',isNotLoggedIn, (req,res) =>{
     res.render('auth/signUp');
 });
 router.post('/registrarse',isNotLoggedIn, passport.authenticate('local.signup',{
-        successRedirect:'/profile',
+        successRedirect:'/perfil',
         failureRedirect:'/registrarse',
         failureFlash:true
 }));
