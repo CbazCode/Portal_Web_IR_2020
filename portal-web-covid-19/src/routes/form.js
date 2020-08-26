@@ -30,6 +30,7 @@ router.post('/form',async(req,res)=>{
     }
    // UTILIZAR PARA EL FOREIGN KEY 
    //console.log(req.user.idusuario);
+   /*
     if(newTest.resultadoTest>9){
         Swal.fire({
             position: 'top-end',
@@ -46,7 +47,8 @@ router.post('/form',async(req,res)=>{
             showConfirmButton: false,
             timer: 1500
           })
-    }
+    } */
+
     //pool.query('INSERT INTO test_usuario SET ?',[newTest] );
    await pool.query('INSERT INTO test_usuario SET ?',[newTest] );
     
