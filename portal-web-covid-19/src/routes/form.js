@@ -33,10 +33,10 @@ router.post('/form',async(req,res)=>{
    //console.log(req.user.idusuario);
    const resu = await pool.query('INSERT INTO test_usuario SET ?',[newTest] );
     if(newTest.resultadoTest>9){
-          res.redirect("covid/enfermo");
+        res.redirect("covid/enfermo");
     }else{
-
         res.redirect("covid/sano");
+        
     }
     //pool.query('INSERT INTO test_usuario SET ?',[newTest] );
    
