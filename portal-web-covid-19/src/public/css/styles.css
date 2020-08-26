@@ -37,6 +37,11 @@
     /*background-image: url(/img/noticias.svg) ;*/
     
 }
+.estados{
+    position:relative;
+    background:#CFF3FD
+    
+}
 .jumbotron::before{
     content:'';
     position: absolute;
