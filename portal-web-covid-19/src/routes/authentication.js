@@ -25,7 +25,8 @@ router.post('/registrarse',isNotLoggedIn, passport.authenticate('local.signup',{
 }));
 
 router.get('/perfil',isLoggedIn ,(req,res)=>{
-    res.render('perfil');
+    /*cambiar perfil por profile */
+    res.render('profile');
 });
 
 router.get('/cerrar-sesion',(req,res)=>{

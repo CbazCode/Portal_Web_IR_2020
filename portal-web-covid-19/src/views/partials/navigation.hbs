@@ -1,7 +1,7 @@
 <header id="header">
     <nav class="menu">
       <div class="logo-box">
-        <h1><a href="/">Covid 19</a></h1>
+        <h1><a href="/" class="logoCovid">Covid 19</a></h1>
         <span class="btn-menu"><i class="fas fa-bars"></i></span>
       </div>
       <div class="list-container">
@@ -10,11 +10,11 @@
             <li><a href="/covid/noticias">Noticias</a></li>
             <li><a href="/covid/recomendaciones">Recomendaciones</a></li>
             {{#if user}}
-            <li ><a href="/perfil"class="inicioSesion">Mi perfil</a></li>
-            <li ><a href="/cerrar-sesion"class="inicioSesion">Cerrar sesión</a></li>
+            <li ><a href="/perfil"class="active">Mi perfil</a></li>
+            <li ><a href="/cerrar-sesion"class="active">Cerrar sesión</a></li>
             {{else}}
-            <li ><a href="/inicio-de-sesion"class="inicioSesion">Iniciar sesión</a></li>
-            <li ><a href="/registrarse" class="registrate">Registrate</a></li>
+            <li ><a href="/inicio-de-sesion"class="active">Iniciar sesión</a></li>
+            <li ><a href="/registrarse" class="active">Registrate</a></li>
             {{/if}}
         </ul>
       </div>
