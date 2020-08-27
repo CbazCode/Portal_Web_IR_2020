@@ -1,0 +1,37 @@
+.enfermo-contenedor{
+    display: flex;
+}
+.estado-salud{
+    
+    height: 48%;
+    margin-top: 0;
+    box-shadow: 0px 0px 5px 0.2px grey;
+    padding-left: 40px;
+    padding-top:5px ; 
+    padding-right: 10px;
+}
+
+.numeros-emergencia{
+    padding-top:5px ;
+    padding-left: 40px;
+    padding-bottom: 5px;
+    height: 48%;
+    box-shadow: 0px 0px 5px 0.2px grey;
+}
+#btn-regresar{
+    margin-top: 20px;
+    font-size: 20px;
+    color: white;
+}
+#btn-regresar:hover{
+
+    color: black;
+}
+#youtube{
+    height: 250px;
+
+}
+#youtube a{
+    
+    text-decoration: none;
+}

@@ -25,11 +25,11 @@ router.get('/noticias', (req,res) =>{
 
 
 router.get('/enfermo',isLoggedIn,(req,res)=>{
-    res.send('enfermo');
+    res.render('links/enfermo');
 })
 
 router.get('/sano',isLoggedIn, (req,res)=>{
-    res.send('sano');
+    res.render('links/sano');
 })
 
 

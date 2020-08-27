@@ -1,0 +1,151 @@
+<main class="main-profile">
+    <div class="img-header">
+    </div>
+    <div class="contenedor-profile">
+        <div class="texto-profile">
+            <p class="saludo">Hola {{user.nombre}} {{user.apellido}}!</p>
+            <div class="datos">
+                <div class="datos-izq">
+                    <p><i class="fas fa-users"></i> Sexo</p>
+                    <p class="rpta">{{user.sexo}}</p>
+                    <p><i class="fas fa-clock"></i> Edad</p>
+                    <p class="rpta">{{user.edad}}</p>
+                    <p><i class="fas fa-phone-square-alt"></i>Telefono</p>
+                    <p class="rpta">{{user.telefono}}</p>
+                    <p><i class="fas fa-id-card"></i> DNI</p>
+                    <p class="rpta">{{user.dni}}</p>
+                    <p><i class="fas fa-envelope"></i> Correo electronico</p>
+                    <p class="rpta">{{user.email}}</p>
+                </div>
+                <div class="datos-dere">
+                    <p><i class="fas fa-map-marker-alt"></i> Departamento</p>
+                    <p class="rpta">{{user.departamento}}</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Provincia</p>
+                    <p class="rpta">{{user.provincia}}</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Distrito</p>
+                    <p class="rpta">{{user.distrito}}</p>
+                    <p><i class="fas fa-heartbeat"></i> Estado de salud</p>
+                    <p class="rpta">{{user.estado}}</p>
+                    <p><i class="fas fa-home"></i> Domicilio</p>
+                    <p class="rpta">{{user.domicilio}}</p>
+                </div>
+            </div>
+        </div>
+        <img src="img/libro.jpg" alt="Usuario" class="imgUsuario">
+    </div>
+    
+    <div class="contenedor-contenido">
+        <div class="btn-test">
+            <a href="/form">Realizar Test</a>
+        </div>
+        <p class="slogan">Aqui podra visualizar los resutlados del test...  </p>
+        <div class="contenedor-tabla">
+            
+            <table>
+                <table>
+                    <thead>
+                <th>idusuario</th>
+                <th>preg1</th>
+                <th>preg2</th>
+                <th>preg3</th>
+                <th>preg4</th>
+                <th>preg5</th>
+                <th>preg6</th>
+                <th>preg7</th>
+                <th>preg8</th>
+                <th>preg9</th>
+                <th>preg10</th>
+                <th>preg11</th>
+                <th>preg12</th>
+                <th>preg13</th>
+                <th>preg14</th>
+                <th>Resultado</th>
+              </thead>
+              <tbody id="countries"></tbody>
+              {{#each objeto}}
+                  <tr>
+                    
+                    <td>{{timeago this.fecha}}</td>
+                    {{#if this.preg1}}
+                      <td>Si</td>
+                    {{else}}
+                      <td>No</td>
+                    {{/if}}
+                    {{#if this.preg2}}
+                      <td>Si</td>
+                    {{else}}
+                      <td>No</td>
+                    {{/if}}
+                    {{#if this.preg3}}
+                      <td>Si</td>
+                    {{else}}
+                      <td>No</td>
+                    {{/if}}
+                    {{#if this.preg4}}
+                      <td>Si</td>
+                    {{else}}
+                      <td>No</td>
+                    {{/if}}
+                    {{#if this.preg5}}
+                      <td>Si</td>
+                    {{else}}
+                      <td>No</td>
+                    {{/if}}
+                    {{#if this.preg6}}
+                      <td>Si</td>
+                    {{else}}
+                      <td>No</td>
+                    {{/if}}
+                    {{#if this.preg7}}
+                      <td>Si</td>
+                    {{else}}
+                      <td>No</td>
+                    {{/if}}
+                    {{#if this.preg8}}
+                      <td>Si</td>
+                    {{else}}
+                      <td>No</td>
+                    {{/if}}
+                    {{#if this.preg9}}
+                      <td>Si</td>
+                    {{else}}
+                      <td>No</td>
+                    {{/if}}
+                    {{#if this.preg10}}
+                      <td>Si</td>
+                    {{else}}
+                      <td>No</td>
+                    {{/if}}
+                    {{#if this.preg11}}
+                      <td>Si</td>
+                    {{else}}
+                      <td>No</td>
+                    {{/if}}
+                    {{#if this.preg12}}
+                      <td>Si</td>
+                    {{else}}
+                      <td>No</td>
+                    {{/if}}
+                    {{#if this.preg13}}
+                      <td>Si</td>
+                    {{else}}
+                      <td>No</td>
+                    {{/if}}
+                    {{#if this.preg14}}
+                      <td>Si</td>
+                    {{else}}
+                      <td>No</td>
+                    {{/if}}
+                    <td>{{this.resultadoTest}} Sintomas</td>
+                    
+                    
+                  </tr>
+                  
+              {{/each}}
+               
+                  </table>
+            </table>
+        </div>
+    </div>
+      
+</main>

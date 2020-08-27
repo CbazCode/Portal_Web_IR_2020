@@ -10,6 +10,7 @@ router.get('/form',(req,res)=>{
 })
 
 router.post('/form',async(req,res)=>{
+    
     const newTest = {
         idusuario: req.user.idusuario,
         preg1: parseInt(req.body.question1),    
@@ -30,28 +31,20 @@ router.post('/form',async(req,res)=>{
     }
    // UTILIZAR PARA EL FOREIGN KEY 
    //console.log(req.user.idusuario);
-   /*
-    if(newTest.resultadoTest>9){
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'sano',
-            showConfirmButton: false,
-            timer: 1500
-          })
-    }else{
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'enfermo',
-            showConfirmButton: false,
-            timer: 1500
-          })
-    } */
+   const resu = await pool.query('INSERT INTO test_usuario SET ?',[newTest] );
 
+   const objeto = await pool.query('SELECT * FROM test_usuario WHERE idusuario = ?', req.user.idusuario);
+   req.app.locals.objeto = objeto;
+
+    if(newTest.resultadoTest>9){
+        res.redirect("covid/enfermo");
+    }else{
+        res.redirect("covid/sano");
+        
+    }
     //pool.query('INSERT INTO test_usuario SET ?',[newTest] );
-   await pool.query('INSERT INTO test_usuario SET ?',[newTest] );
-    
+   
+   
 })
 
 module.exports = router;
