@@ -8,16 +8,20 @@ router.get('/inicio-de-sesion',isNotLoggedIn, (req,res) =>{
 });
 
 router.post('/inicio-de-sesion',isNotLoggedIn,(req,res,next) =>{
+    //req.app.locals.objeto = 'test';
     passport.authenticate('local.signin',{
         successRedirect:'/perfil',
         failureRedirect:'/inicio-de-sesion',
         failureFlash:true
     })(req,res,next);
+    
+
 });
 
 router.get('/registrarse',isNotLoggedIn, (req,res) =>{
     res.render('auth/signUp');
 });
+
 router.post('/registrarse',isNotLoggedIn, passport.authenticate('local.signup',{
         successRedirect:'/perfil',
         failureRedirect:'/registrarse',

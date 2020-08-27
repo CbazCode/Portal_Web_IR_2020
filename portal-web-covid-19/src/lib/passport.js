@@ -9,16 +9,28 @@ passport.use('local.signin', new LocalStrategy({
   passReqToCallback: true
   
 }, async (req, email, contraseña, done) => {
-  console.log(req.body);
-  console.log(email);
-  console.log(contraseña);
+  //console.log(req.body);
+  //console.log(email);
+  //console.log(contraseña);
   const rows = await pool.query('SELECT * FROM usuarios WHERE email = ?', [email]);
+
+  
+
   //console.log(rows.length);
   if (rows.length > 0) {
     const user = rows[0];
-    const validPassword = await helpers.matchPassword(contraseña, user.contraseña)
+    
+   const objeto = await pool.query('SELECT * FROM test_usuario WHERE idusuario = ?', rows[0].idusuario);
+   
+
+    const validPassword = await helpers.matchPassword(contraseña, user.contraseña);
     if (validPassword) {
+
+      req.app.locals.objeto = objeto;
+
       done(null, user, req.flash('success', 'Welcome ' + user.email));
+      
+
     } else {
       done(null, false, req.flash('message', 'Incorrect Password'));
     }

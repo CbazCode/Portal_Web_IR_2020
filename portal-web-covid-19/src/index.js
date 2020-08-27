@@ -56,8 +56,14 @@ app.use((req,res,next)=>{
     app.locals.success=req.flash('success');
     app.locals.message=req.flash('message');
     app.locals.user = req.user;
+
+    app.locals.objeto = req.app.locals.objeto;
+    
     next();
 });
+
+
+
 
 //Routes
 
@@ -74,3 +80,4 @@ app.use(express.static(path.join(__dirname,'public')));
 app.listen(app.get('port'), () => {
     console.log('Server is in port', app.get('port'));
 });
+
