@@ -1,9 +1,29 @@
+/*Imagen carrusel*/
+.covid-carrusel-img{
+    object-fit: cover;
+    object-position: center;
+}
+
 /* Imagen de desarrolladores */
 .desarrolladores{
     position: relative;
     left: 25%;
+    object-fit: cover;
     transition: 0.5s all;
     border-radius:150px;
+}
+.diego{
+    object-position: top;
+}
+.descri-desarrollador{
+    text-align: center;
+}
+#github,#instagram{
+    font-size: 35px; 
+    color: black;
+}
+#instagram:hover,#github:hover{
+    color:rgb(57, 130, 155);
 }
 .desarrolladores:hover{
     -webkit-transform:scale(1.25);

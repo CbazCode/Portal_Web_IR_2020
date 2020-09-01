@@ -66,12 +66,14 @@
     font-family: arial, sans-serif;
     border-collapse: collapse;
     box-shadow: 0px 0px 7px 0.2px grey;
+    margin-right: 20px ;
+    margin-left: 10px;
   }
   
   td,
   th {
     border: 1px solid lightblue;
-    text-align: left;
+    text-align: center;
     padding: 15px;
     width: 500px;
   }
