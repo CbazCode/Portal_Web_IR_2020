@@ -43,28 +43,27 @@
             
             <table>
                 <table>
-                    <thead>
-                <th>Fecha</th>
-                <th>preg1</th>
-                <th>preg2</th>
-                <th>preg3</th>
-                <th>preg4</th>
-                <th>preg5</th>
-                <th>preg6</th>
-                <th>preg7</th>
-                <th>preg8</th>
-                <th>preg9</th>
-                <th>preg10</th>
-                <th>preg11</th>
-                <th>preg12</th>
-                <th>preg13</th>
-                <th>preg14</th>
+                    <thead style= "font-size: 14px;"> 
+                <th>Tiempo</th>
+                <th>Pregunta 1</th>
+                <th>Pregunta 2</th>
+                <th>Pregunta 3</th>
+                <th>Pregunta 4</th>
+                <th>Pregunta 5</th>
+                <th>Pregunta 6</th>
+                <th>Pregunta 7</th>
+                <th>Pregunta 8</th>
+                <th>Pregunta 9</th>
+                <th>Pregunta 10</th>
+                <th>Pregunta 11</th>
+                <th>Pregunta 12</th>
+                <th>Pregunta 13</th>
+                <th>Pregunta 14</th>
                 <th>Resultado</th>
               </thead>
-              <tbody id="countries"></tbody>
+              <tbody id="countries" style="font-size: 13px;">
               {{#each objeto}}
                   <tr>
-                    
                     <td>{{timeago this.fecha}}</td>
                     {{#if this.preg1}}
                       <td>Si</td>
@@ -142,6 +141,7 @@
                   </tr>
                   
               {{/each}}
+              </tbody>
                
                   </table>
             </table>
