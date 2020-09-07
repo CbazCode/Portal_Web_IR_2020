@@ -4,7 +4,6 @@ var Bing = require('node-bing-api')({ accKey: "842f394f231646f5870606f868d4440e"
 const { isLoggedIn } = require('../lib/auth');
 const pool = require('../database');
 
-
 router.get('/recomendaciones', (req,res) =>{
     Bing.news("Recomendaciones prevenir COVID-19", { count: 6 }, (error, resNews, body) => {
         
@@ -16,7 +15,7 @@ router.get('/recomendaciones', (req,res) =>{
 
 
 router.get('/noticias', (req,res) =>{
-    Bing.news("coronavirus peru minsa", { count: 12 }, (error, resNews, body) => {
+    Bing.news("coronavirus peru", { count: 12, market:'es-ES' }, (error, resNews, body) => {
         
         res.render('links/noticias', {noticias: body.value})
         
