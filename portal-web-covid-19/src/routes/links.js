@@ -6,7 +6,7 @@ const pool = require('../database');
 
 
 router.get('/recomendaciones', (req,res) =>{
-    Bing.news("Recomendaciones prevencion COVID-19", { count: 6 }, (error, resNews, body) => {
+    Bing.news("Recomendaciones prevenir COVID-19", { count: 6 }, (error, resNews, body) => {
         
         res.render('links/recomendaciones', {recomendaciones: body.value})
         
@@ -16,7 +16,7 @@ router.get('/recomendaciones', (req,res) =>{
 
 
 router.get('/noticias', (req,res) =>{
-    Bing.news("noticias coronavirus peru español", { count: 12 }, (error, resNews, body) => {
+    Bing.news("coronavirus peru minsa", { count: 12 }, (error, resNews, body) => {
         
         res.render('links/noticias', {noticias: body.value})
         
