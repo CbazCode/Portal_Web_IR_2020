@@ -16,7 +16,7 @@ router.get('/recomendaciones', (req,res) =>{
 
 
 router.get('/noticias', (req,res) =>{
-    Bing.news("COVID-19 peru", { count: 12 }, (error, resNews, body) => {
+    Bing.news("noticias coronavirus peru español", { count: 12 }, (error, resNews, body) => {
         
         res.render('links/noticias', {noticias: body.value})
         
