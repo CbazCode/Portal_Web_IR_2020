@@ -67,7 +67,7 @@ app.use((req,res,next)=>{
 
 //Routes
 
-app.use(require('./routes'));
+app.use(require('./routes/index1'));
 app.use(require('./routes/authentication'));
 app.use('/COVID', require('./routes/links'));
 app.use(require('./routes/form'));
