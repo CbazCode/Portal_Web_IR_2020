@@ -5,7 +5,7 @@ const { isLoggedIn } = require('../lib/auth');
 const pool = require('../database');
 
 router.get('/recomendaciones', (req,res) =>{
-    Bing.news("Recomendaciones prevenir COVID-19", { count: 6 }, (error, resNews, body) => {
+    Bing.news("Recomendaciones prevenir COVID-19", { count: 6, market:'es-ES'  }, (error, resNews, body) => {
         
         res.render('links/recomendaciones', {recomendaciones: body.value})
         
