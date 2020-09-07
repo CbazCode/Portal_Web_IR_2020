@@ -4,7 +4,7 @@
   "description": "Proyecto fisi",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "node src/"
   },
   "keywords": [],
   "author": "",
