@@ -18,6 +18,9 @@
     height: 48%;
     box-shadow: 0px 0px 5px 0.2px grey;
 }
+.img-fluid{
+    width: 100%;
+}
 #btn-regresar{
     margin-top: 20px;
     font-size: 20px;
@@ -32,6 +35,31 @@
 
 }
 #youtube a{
-    
+    text-align: center;
     text-decoration: none;
+}
+@media only screen and (max-width:768px){
+    .estado-salud{
+    
+        height:60%;
+        margin-top: 0;
+        box-shadow: 0px 0px 5px 0.2px grey;
+        padding-left: 40px;
+        padding-top:2px ; 
+        padding-right: 10px;
+        font-size: 13.5px;
+    }
+    .numeros-emergencia{
+        padding-top:0px ;
+        padding-left: 60px;
+        padding-bottom: 5px;
+        height: 48%;
+        box-shadow: 0px 0px 5px 0.2px grey;
+        font-size: 13px;
+    }
+    #btn-regresar{
+        margin-top: 80px;
+        font-size: 15px;
+        color: white;
+    }
 }
