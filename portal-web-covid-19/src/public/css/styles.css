@@ -203,6 +203,7 @@
     position: relative;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 90px;
+    overflow: hidden;
 }
 
 .texto-recomendaciones{
