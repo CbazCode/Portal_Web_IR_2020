@@ -231,12 +231,22 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
+    
   }
   .container-images-noticias{
+      
       background:#CFF3FD;
+      height: 100%;
+ 
+    
   }
   .texto-noticias{
       font-size: 15px;
+      height: 100%;
+  }
+
+  #boton-noticia{
+      margin-top:-13px;
   }
 
 .jumbotron{
