@@ -7,4 +7,21 @@
     left:25%;
     width: 50%;
     background-color:#E0FFFF;
+    text-align: center;
+}
+@media only screen and (max-width: 669px) {
+    .bodyQuestions{
+        text-align: center;
+        font-size:20px;
+        width: 90%;
+        left:5%;
+    }
+}
+@media only screen and (max-width: 435px) {
+    .bodyQuestions{
+        text-align: center;
+        font-size:20px;
+        width: 100%;
+        left:0;
+    }
 }
