@@ -36,7 +36,7 @@ router.post('/form',async(req,res)=>{
    const objeto = await pool.query('SELECT * FROM test_usuario WHERE idusuario = ?', req.user.idusuario);
    req.app.locals.objeto = objeto;
 
-    if(newTest.resultadoTest>9){
+    if(newTest.resultadoTest>=11){
         res.redirect("covid/enfermo");
     }else{
         res.redirect("covid/sano");
