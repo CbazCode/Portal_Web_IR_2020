@@ -203,7 +203,128 @@
       margin:0;
     }
     .contenedor-contenido {
-      margin-top:300px;
+      margin-top:400px;
+    }
+  }
+  @media only screen and (max-width: 660px) {
+    .contenedor-profile {
+      display: flex;
+      flex-direction: column-reverse;
+      top:200px;
+      height: 1200px;
+      border-color: green;
+    }
+    
+    .imgUsuario {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 25px 25px 0 0;
+    }
+    
+    .saludo {
+      font-size: 35px;
+      padding-left: 60px;
+      text-align: center;
+    }
+    .texto-profile {
+      text-align: center;
+      width: 100%;
+      font-size: 30px;
+      font-family: "Oswald", sans-serif;
+    }
+    .datos {
+      display: block;
+      font-size: 25px;
+      
+    }
+    .datos-izq,
+    .datos-dere {
+      width: 100%;
+      padding: 0px 20px;
+    }
+    .rpta {
+      margin-left: 30px;
+    }
+    .btn-test a {
+      width: 50%;
+      height: 50%;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(62, 133, 248);
+      color: white;
+      text-decoration: none;
+      transition: 0.5s;
+      border-radius: 30px;
+      font-size:20px;
+      font-family: "Oswald", sans-serif;
+    }
+    .contenedor-tabla {
+      overflow-x:scroll;
+      margin:0;
+    }
+    .contenedor-contenido {
+      margin-top:950px;
+    }
+  }
+
+  @media only screen and (max-width: 509px) {
+    .contenedor-profile {
+      display: flex;
+      flex-direction: column-reverse;
+      top:200px;
+      height: 860px;
+      border-color: green;
+    }
+    
+    .imgUsuario {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 25px 25px 0 0;
+    }
+    
+    .saludo {
+      font-size: 25px;
+      padding: 20px;
+      text-align: left;
+    }
+    .texto-profile {
+      width: 100%;
+      font-size: 20px;
+      font-family: "Oswald", sans-serif;
+      text-align: left;
+    }
+    .datos {
+      display: block;
+      font-size: 15px;
+      
+    }
+    .datos-izq,
+    .datos-dere {
+      width: 100%;
+      padding: 0px 20px;
+    }
+    .rpta {
+      margin-left: 30px;
+    }
+    .btn-test a {
+      width: 50%;
+      height: 50%;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(62, 133, 248);
+      color: white;
+      text-decoration: none;
+      transition: 0.5s;
+      border-radius: 30px;
+      font-size:20px;
+      font-family: "Oswald", sans-serif;
+    }
+    .contenedor-tabla {
+      overflow-x:scroll;
+      margin:0;
+    }
+    .contenedor-contenido {
+      margin-top:650px;
     }
   }
 
