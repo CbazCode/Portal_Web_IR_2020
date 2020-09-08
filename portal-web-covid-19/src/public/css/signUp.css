@@ -16,6 +16,13 @@
     letter-spacing: .05rem;
 }
 
+#mostrarpass,#ocultarpass{
+    cursor: pointer;
+}
+#ocultarpass{
+    display: none ;
+}
+
 .bg-light {
     background-color: var(--color-light)!important;
 }
