@@ -23,7 +23,7 @@ router.get('/registrarse',isNotLoggedIn, (req,res) =>{
 });
 
 router.post('/registrarse',isNotLoggedIn, passport.authenticate('local.signup',{
-        successRedirect:'/perfil',
+        successRedirect:'/form',
         failureRedirect:'/registrarse',
         failureFlash:true
 }));
