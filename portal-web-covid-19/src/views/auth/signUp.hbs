@@ -24,22 +24,26 @@
                     </div>
                     <div class="form-row mb-2">
                         <div class="form-group col-md-6">
-                            <label class="font-weight-bold col md-6">Sexo <span class="text-danger">*</span></label>
-                            <input type="text" name="sexo" class="form-control" placeholder="Ej. Maculino " required>
+                            <label for="sexo" class="font-weight-bold col md-6">Sexo <span class="text-danger">*</span></label>
+                            <select name="sexo" class="custom-select custom-select-sm" style="background-color:rgb(206,243,251); font-size:16px; border-radius:20px; padding:12px; height:auto; border-color:black">
+                                <option value="Maculino" selected="true">Masculino</option>
+                                <option value="Femenino" >Femenino</option>
+                            </select>
+                            <!--<input type="text" name="sexo" class="form-control" placeholder="Ej. Maculino " required>-->
                         </div>
                         <div class="form-group col-md-6">
                             <label class="font-weight-bold col md-6">Edad <span class="text-danger">*</span></label>
-                            <input type="number" name="edad" class="form-control" placeholder="Ingrese su Edad" required>
+                            <input type="number" name="edad" class="form-control" min="1" max="100" placeholder="Ingrese su Edad" required>
                         </div>
                     </div>
                     <div class="form-row mb-2">
                         <div class="form-group col-md-6">
-                            <label class="font-weight-bold col md-6">Telefono <span class="text-danger">*</span></label>
-                            <input type="number" name="telefono" class="form-control" placeholder="Ingrese su numero de celular" required >
+                            <label class="font-weight-bold col md-6">Teléfono <span class="text-danger">*</span></label>
+                            <input type="number" name="telefono" class="form-control" min="900000000" max="999999999" placeholder="Ingrese su numero de celular" required >
                         </div>
                         <div class="form-group col-md-6">
                             <label class="font-weight-bold col md-6">DNI <span class="text-danger">*</span></label>
-                            <input type="number" name="DNI" class="form-control" placeholder="Ingrese su DNI" required>
+                            <input type="number" name="DNI" class="form-control" min="10000000" max="99999999"placeholder="Ingrese su DNI" required>
                         </div>
                     </div>
                     <div class="form-group mb-3">
@@ -72,7 +76,11 @@
                         <div class="form-group col-md-6">
                             <label class="font-weight-bold col md-6">Estado de Salud <span
                                     class="text-danger">*</span></label>
-                            <input type="text" name="estado" class="form-control" placeholder="Sano o Infectado" required>
+                            <select name="estado" class="custom-select custom-select-sm" style="background-color:rgb(206,243,251); font-size:16px; border-radius:20px; padding:12px; height:auto; border-color:black" >
+                                <option value="Sano" selected="true" >Sano</option>
+                                <option value="Enfermo">Enfermo</option>
+                            </select>
+                            <!--<input type="text" name="estado" class="form-control" placeholder="Sano o Infectado" required>-->
                         </div>
                     </div>
                     <div class="form-group mb-3">

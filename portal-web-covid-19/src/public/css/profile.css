@@ -83,7 +83,7 @@
   }
   
   .contenedor-contenido {
-    margin-top:530px;
+    margin-top:560px;
     margin-bottom: 10px;
   }
   .contenedor-tabla {
@@ -126,7 +126,70 @@
   .btn-test a:hover {
     background:rgb(59, 159, 192);
   }
-  
+
+  @media only screen and (max-width: 1372px) {
+    .contenedor-profile {
+      height: 60%;
+      background-color: lightblue;
+    }
+    .saludo {
+      
+      padding-top: 2px;
+      padding-left: 20px;
+    }
+    .datos {
+      margin-top: 0;
+      font-size: 20px;
+      
+    }
+    .rpta{
+      font-size: 20px;
+      padding-top: 0;
+      padding-bottom:0 ;
+      margin-top:0;
+    }
+    .datos-izq p,
+    .datos-dere p{
+      padding-left: 15px;
+      margin-bottom: 10px;
+
+    }
+    .contenedor-contenido {
+      margin-top: 450px;
+    }
+  }
+  @media only screen and (max-width: 1310px) {
+    .contenedor-profile {
+      height: 60%;
+      background-color: lightblue;
+    }
+    .saludo {
+      font-size: 60px;
+      padding-top: 2px;
+      padding-left: 20px;
+    }
+    .datos {
+      margin-top: 0;
+      font-size: 20px;
+      
+    }
+    .rpta{
+      font-size: 20px;
+      padding-top: 0;
+      padding-bottom:0 ;
+      margin-top:0;
+    }
+    .datos-izq p,
+    .datos-dere p{
+      padding-left: 15px;
+      margin-bottom: 10px;
+
+    }
+    .contenedor-contenido {
+      margin-top: 450px;
+    }
+  }
+
   @media only screen and (max-width: 1280px) {
     .contenedor-profile {
       height: 60%;
@@ -139,11 +202,11 @@
     }
     .datos {
       margin-top: 0;
-      font-size: 15px;
+      font-size: 20px;
       
     }
     .rpta{
-      font-size: 15px;
+      font-size: 20px;
       padding-top: 0;
       padding-bottom:0 ;
       margin-top:0;
@@ -155,9 +218,42 @@
 
     }
     .contenedor-contenido {
-      margin-top: 280px;
+      margin-top: 420px;
     }
   }
+
+  @media only screen and (max-width: 1018px) {
+    .contenedor-profile {
+      height: 60%;
+      background-color: lightblue;
+    }
+    .saludo {
+      font-size: 35px;
+      padding-top: 2px;
+      padding-left: 20px;
+    }
+    .datos {
+      margin-top: 0;
+      font-size: 20px;
+      
+    }
+    .rpta{
+      font-size: 20px;
+      padding-top: 0;
+      padding-bottom:0 ;
+      margin-top:0;
+    }
+    .datos-izq p,
+    .datos-dere p{
+      padding-left: 15px;
+      margin-bottom: 10px;
+
+    }
+    .contenedor-contenido {
+      margin-top: 420px;
+    }
+  }
+ 
   @media only screen and (max-width: 768px) {
     .contenedor-profile {
       height: 60%;
